@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import SupabaseProvider from "@/providers/SupabaseProvider";
+import UserProvider from "@/providers/UserProvider";
+import ModalProvider from "@/providers/ModalProvider";
+import ToastProvider from "@/providers/ToastProvider";
 
 const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -18,7 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jetBrainsMono.className}>
-        <Sidebar>{children}</Sidebar>
+        <ToastProvider />
+        <SupabaseProvider>
+          <UserProvider>
+            <ModalProvider />
+            <Sidebar>{children}</Sidebar>
+          </UserProvider>
+        </SupabaseProvider>
       </body>
     </html>
   );
