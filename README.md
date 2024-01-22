@@ -24,6 +24,6 @@ This project is about a Nextjs app with Spotify-like UI and functionality.
 
 ## To do
 
-- [ ] Authentication
-- [ ] Music player
+- [x] Authentication
 - [ ] Upload music
+- [ ] Music player
