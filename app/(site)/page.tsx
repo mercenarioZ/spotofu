@@ -1,7 +1,14 @@
+import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
+import PageContent from "./components/PageContent";
 
-export default function Home() {
+// this constant is used to revalidate the page every 0 seconds
+export const revalidate = 0;
+
+export default async function Home() {
+  const songs = await getSongs();
+
   return (
     <div className="bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto">
       <Header>
@@ -23,8 +30,7 @@ export default function Home() {
           <h1 className="text-xl font-semibold">Newest songs</h1>
         </div>
 
-        {/* List of songs */}
-        <div>List of songs</div>
+        <PageContent songs={songs} />
       </div>
     </div>
   );
