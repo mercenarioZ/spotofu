@@ -10,7 +10,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         type={type}
         className={twMerge(
-          "w-fit hover:opacity-75 transition p-2 font-bold",
+          "w-fit hover:opacity-75 transition px-4 py-2 font-bold",
           className,
           disabled && "opacity-50 cursor-not-allowed"
         )}

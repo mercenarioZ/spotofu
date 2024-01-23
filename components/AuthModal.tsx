@@ -34,7 +34,7 @@ const AuthModal = () => {
     <Modal
       isOpen={isOpen}
       title="Welcome back"
-      description="Login now"
+      description=""
       onChange={onChange}
     >
       <Auth

@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
 
               <Button
                 onClick={() => router.push("/account")}
-                className="bg-green-600 rounded-full"
+                className="bg-green-600 rounded-full py-3"
               >
                 <FaUserAlt />
               </Button>
@@ -100,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           ) : (
             <>
               <Button
-                onClick={modal.onOpen}
+              onClick={modal.onOpen}
                 className="font-medium"
               >
                 Sign up
