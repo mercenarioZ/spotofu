@@ -32,5 +32,5 @@ This project is about a Nextjs app with Spotify-like UI and functionality.
 ## To do
 
 - [x] Authentication (Supabase)
-- [ ] Upload music
+- [x] Upload music
 - [ ] Music player
