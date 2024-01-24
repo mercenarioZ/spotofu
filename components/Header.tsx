@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
 
               <Button
                 onClick={() => router.push("/account")}
-                className="bg-green-600 rounded-full py-3"
+                className="bg-green-600 rounded-full p-3"
               >
                 <FaUserAlt />
               </Button>
