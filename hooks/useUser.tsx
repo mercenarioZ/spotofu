@@ -1,3 +1,9 @@
+/** 
+ * Explanation:
+ * 
+ * `useUser` is a custom hook that provides the user details and subscription details from Supabase.
+ */
+
 import { Subscription, UserDetails } from "@/types";
 import { User } from "@supabase/auth-helpers-nextjs";
 import {
