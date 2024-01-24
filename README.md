@@ -34,7 +34,7 @@ This project is about a Nextjs app with Spotify-like UI and functionality.
 - [x] Authentication (Supabase)
 - [x] Upload music
 - [x] Search page & functionalities
-- [ ] Favorites songs UI & functionalities
+- [x] Favorites songs UI & functionalities
 - [ ] Subscription page
 - [ ] Profile page
 - [ ] Stripe integration
