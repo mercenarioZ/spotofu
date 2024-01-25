@@ -7,6 +7,7 @@ import { Song } from "@/types";
 import { AiOutlinePlus } from "react-icons/ai";
 import { TbPlaylist } from "react-icons/tb";
 import MediaItem from "./MediaItem";
+import useOnPlay from "@/hooks/useOnPlay";
 
 interface LibraryProps {
   songs: Song[];
@@ -16,6 +17,7 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
   const authModal = useAuthModal();
   const { user } = useUser();
   const uploadModal = useUploadModal();
+  const onPlay = useOnPlay(songs);
 
   const onClick = () => {
     // If the user is not logged in, show the auth modal
@@ -51,7 +53,7 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
         {songs.map((song) => (
           <MediaItem
             key={song.id}
-            onClick={() => {}}
+            onClick={(id: string) => onPlay(id)}
             data={song}
           />
         ))}

@@ -15,7 +15,6 @@ const SongCard: React.FC<SongCardProps> = ({ data, onClick }) => {
 
   return (
     <div
-      onClick={() => onClick(data.id)}
       className="
         relative
         group
@@ -51,7 +50,7 @@ const SongCard: React.FC<SongCardProps> = ({ data, onClick }) => {
       </div>
 
       <div className="absolute bottom-24 right-5">
-        <PlayButton />
+        <PlayButton onClick={() => onClick(data.id)} />
       </div>
     </div>
   );
