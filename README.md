@@ -38,4 +38,4 @@ This project is about a Nextjs app with Spotify-like UI and functionality.
 - [ ] Subscription page
 - [ ] Profile page
 - [ ] Stripe integration
-- [ ] Music player
+- [x] Music player
